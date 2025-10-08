@@ -4,7 +4,7 @@ import './globals.css';
 import { SidebarProvider } from '@/context/SidebarContext';
 import { ThemeProvider } from '@/context/ThemeContext';
 import { SpeedInsights } from '@vercel/speed-insights/next'; // <-- Import SpeedInsights
-
+import { Analytics } from "@vercel/analytics/next"
 const outfit = Outfit({
   subsets: ["latin"],
 });
@@ -22,6 +22,7 @@ export default function RootLayout({
         </ThemeProvider>
         {/* Add SpeedInsights at the end of the body */}
         <SpeedInsights /> 
+        <Analytics /> 
       </body>
     </html>
   );
